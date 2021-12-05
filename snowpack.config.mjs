@@ -1,20 +1,24 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
-module.exports = {
+export default {
   mount: {
-    public: "/",
-    src: "/dist",
+    public: '/',
+    src: '/dist',
   },
   devOptions: {
     port: 8000,
-    open: "none",
+    open: 'none',
   },
   buildOptions: {
-    out: "_build",
+    out: '_build',
   },
   optimize: {
     bundle: true,
     minify: true,
     sourcemap: false,
+  },
+  alias: {
+    scenes: './src/scenes',
+    prefabs: './src/prefabs',
   },
   plugins: [
     /* ... */

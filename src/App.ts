@@ -1,17 +1,13 @@
 import Phaser from 'phaser';
-
-class MainScene extends Phaser.Scene {
-  constructor() {
-    super('MainScene');
-    console.log('Hello');
-  }
-}
+import MainScene from 'scenes/MainScene';
 
 export const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
-  width: 1280,
-  height: 720,
+  width: 640,
+  height: 1024,
+  backgroundColor: '#333333',
   scene: [MainScene],
 };
+// parent: 'phaser-game',
 
 export default new Phaser.Game(config);
